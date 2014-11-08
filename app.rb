@@ -4,7 +4,7 @@ class InitialsAvatar < Sinatra::Base
   MIN_CANVAS_SIZE = 100
 
   # Font size as a proportion of the canvas
-  FONT_RATIO = 0.40
+  FONT_RATIO = 0.30
 
   # Shift down text 4% from the center, since we're using caps
   Y_OFFSET = 0.01
