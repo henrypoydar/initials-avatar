@@ -7,7 +7,7 @@ class InitialsAvatar < Sinatra::Base
   FONT_RATIO = 0.30
 
   # Shift down text 4% from the center, since we're using caps
-  Y_OFFSET = 0.01
+  Y_OFFSET = -0.01
 
   # Resize filter and sharpness settings
   # See http://stackoverflow.com/a/13243833/102542 for samples
@@ -43,7 +43,7 @@ class InitialsAvatar < Sinatra::Base
 
     # Create the text annotation
     Magick::Draw.new.annotate(img, canvas_size,canvas_size,0,canvas_size*Y_OFFSET, params[:initials][0..2].upcase) do
-      self.font = 'ProximaNova-Sbold.ttf'
+      self.font = 'fonts/Lato-Bold.ttf'
       self.fill = fill
       self.gravity = Magick::CenterGravity
       self.pointsize = canvas_size*FONT_RATIO
