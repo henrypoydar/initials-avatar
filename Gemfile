@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
 gem "sinatra"
-gem "rmagick", require: "RMagick"
+gem "rmagick", ' 2.16', '>= 2.16', require: "RMagick"
